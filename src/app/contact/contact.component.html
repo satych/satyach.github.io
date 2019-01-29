@@ -1,0 +1,16 @@
+
+<div class="container card">
+<div [formGroup]="contactForm" class="form-group" class="col-md-6" >
+Full Name:<input type="text" formControlName="fullname" class="form-control">
+<div *ngIf="contactForm.controls['fullname'].errors">
+  <p *ngIf="contactForm.controls['fullname'].touched" class="alert alert-danger">fullname mandetory field</p>
+</div> 
+
+Mobile Number:<input type="number" formControlName="mobilenumber" class="form-control">
+Email Id:<input type="text" formControlName="emailid" class="form-control">  
+Location:<input type="text" formControlName="location" class="form-control">
+<!-- Contact_Data:<input type="text" formControlName="contact_data" class="form-control"> -->
+Remarks:<input type="text" formControlName="remarks" class="form-control"><br>
+<button (click)="abc()" class="btn btn-primary" >Send</button>
+</div>
+</div>
